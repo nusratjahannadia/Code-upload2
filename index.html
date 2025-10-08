@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter a number</title>
+</head>
+<body>
+    <h1 id="header"></h1>
+    <p>Enter a time</p>
+    <input id="textbox" type="text">
+
+    <button id="btn">Submit</button>
+
+    <script>
+        let header=document.getElementById("header");
+        let textbox = document.getElementById("textbox");
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("click" ,function (){
+        if(textbox.value < 33){
+           header.innerHTML="you fail the exam" 
+        }else if(textbox.value >=80){
+            header.innerHTML="you got A+"
+        }else if(textbox.value >=70) {
+            header.innerHTML="you got A"
+        } else if(textbox.value>= 60){
+            header.innerHTML="you got A-"
+        }else if (textbox.value<= 50){
+            header.innerHTML="you got D"
+        }
+        else{
+            header.innerHTML="wrong input"
+        }
+        } )
+    </script>
+</body>
+</html>
